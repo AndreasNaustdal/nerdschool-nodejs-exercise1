@@ -21,5 +21,8 @@
   "bugs": {
     "url": "https://github.com/AndreasNaustdal/nerdschool-nodejs-exercise1/issues"
   },
-  "homepage": "https://github.com/AndreasNaustdal/nerdschool-nodejs-exercise1#readme"
+  "homepage": "https://github.com/AndreasNaustdal/nerdschool-nodejs-exercise1#readme",
+  "dependencies": {
+    "express": "^4.16.2"
+  }
 }
