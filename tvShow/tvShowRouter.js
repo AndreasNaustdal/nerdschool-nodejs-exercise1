@@ -3,8 +3,15 @@ const app = express();
 const tvShowRouter = express.Router();
 const tvShowService = require('./TvShowService');
 
-tvShowRouter.get('/', (req, res) => {
+tvShowRouter.route('/')
+.get((req, res) => {
   res.json(tvShowService.getAll());
+})
+.post((req, res) => {
+  const name = req.body.name;
+  const genre = req.body.genre;
+  const newTVShow = tvShowService.createTvShow(name, genre);
+  res.send(newTVShow);
 });
 
 tvShowRouter.route('/:tvShowId').get((req, res) => {
