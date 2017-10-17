@@ -14,10 +14,17 @@ tvShowRouter.route('/')
   res.send(newTVShow);
 });
 
-tvShowRouter.route('/:tvShowId').get((req, res) => {
-  const tvShowId = parseInt(req.params.tvShowId);
+tvShowRouter.route('/:tvShowId')
+.get((req, res) => {
+  const tvShowId = req.params.tvShowId;
   const tvShow = tvShowService.getById(tvShowId);
   res.send(`Fetching TV Show with the id ${tvShowId}.
     The TV Show is ${tvShow.name} and is of the genre ${tvShow.genre}`);
+})
+.delete((req, res) => {
+  const id = req.params.tvShowId;
+  const remainingTVShows = tvShowService.deleteTvShow(id);
+  res.send(remainingTVShows);
 });
+
 module.exports = tvShowRouter;

@@ -4,8 +4,8 @@ const createId = require('../utils/idUtil');
 class TvShowService {
   constructor() {
     this.tvShows = [
-      new TvShow(1, 'Forviklingar', 'Drama'),
-      new TvShow(2, 'Ut i Vår Hage', 'Comedy')
+      new TvShow("1", 'Forviklingar', 'Drama'),
+      new TvShow("2", 'Ut i Vår Hage', 'Comedy')
     ];
   }
 
@@ -22,6 +22,11 @@ class TvShowService {
     const tvShow = new TvShow(id, name, genre);
     this.tvShows.push(tvShow);
     return tvShow;
+  }
+
+  deleteTvShow(id) {
+    this.tvShows = this.tvShows.filter(tvShow => (tvShow.id !== id));
+    return this.tvShows;
   }
 }
 module.exports = new TvShowService();
