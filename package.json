@@ -1,0 +1,25 @@
+{
+  "name": "nerdschool-nodejs-exercise1",
+  "version": "1.0.0",
+  "description": "nerdschoole nodejs exercise1",
+  "main": "server.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AndreasNaustdal/nerdschool-nodejs-exercise1.git"
+  },
+  "keywords": [
+    "rest",
+    "http",
+    "web",
+    "fun"
+  ],
+  "author": "Andreas Naustdal",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AndreasNaustdal/nerdschool-nodejs-exercise1/issues"
+  },
+  "homepage": "https://github.com/AndreasNaustdal/nerdschool-nodejs-exercise1#readme"
+}
